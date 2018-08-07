@@ -57,6 +57,15 @@
     display: flex;
     flex-flow: column nowrap;
 }
+.headerAddPost{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#000;
+    color:#fff;
+}
 .modalClose{
     width:100%;
     height: 15%;
@@ -92,6 +101,71 @@
 .content{
     width: 100%;
     height: 60%;
+}
+.addPostContent{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.AddPostForm{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.AddPostForm input {
+    width: 70%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    height: 35px;
+    background:transparent;
+    border:none;
+    border-bottom: solid 1.5px;
+    color:#000;
+    text-align: center;
+    outline:none;
+}
+.AddPostForm input[type="file"]{
+    display: none;
+}
+.custom-file-upload {
+    margin-top:20px;
+    border:none;
+    display: inline-block;
+    color:#fff;
+    cursor:pointer;
+    border-radius: 3px;
+    background:#880d0d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    width: 70%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddPostForm textarea{
+    max-width: 70%;
+    min-width: 70%;
+    max-height: 50%;
+    min-height: 50%;
+    outline:none;
+    text-align: center;
+    border: solid 1.5px;
+    margin-top:20px;
+    overflow-y:hidden;
+}
+
+.AddPostForm input:focus{
+    transition:0.2s linear;
+    border-bottom: 1.5px solid #4a69bd;
+}
+.AddPostForm textarea:focus{
+    transition:0.2s linear;
+    border: 1.5px solid #4a69bd;
 }
 .authInputLogin{
     width: 100%;
@@ -151,6 +225,10 @@
     border:solid 2px #ba0b05;
     color:#ba0b05;
 }
+.addPostButton{
+    width:70%;
+    margin-top:10px;
+}
 .or{
     width:100%;
     display: flex;
@@ -196,4 +274,10 @@
     align-items: center;
     flex-flow: column;
 
+}
+.createpostContainer{
+    width:80%;
+    height:85%;
+    display: flex;
+    flex-flow: row;
 }

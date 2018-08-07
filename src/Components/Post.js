@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-
+import Posts from './PostComponent'
+import FloatButton from './FloatButtonComponent'
 class Post extends Component{
 render(){
 	return(
 			<div className="Post">
-				<h1>Desde Post</h1>
+				<Posts pageTitle = "Posts"/>
+				<FloatButton/>
 			</div>
 		);
 	}

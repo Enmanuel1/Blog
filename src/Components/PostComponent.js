@@ -7,6 +7,7 @@ class PostComponent extends Component {
 
         return(
             <div className="Content">
+            <h1>{this.props.pageTitle}</h1>
             <div className="postMainContainer">
             <div className="postContainer">
               <div className="postImage">

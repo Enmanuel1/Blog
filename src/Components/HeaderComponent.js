@@ -23,6 +23,7 @@ class HeaderComponent extends Component {
     componentDidMount(){
         $(document).ready(function () {
             var flag = false;
+            var flag2 = false;
             var scroll;
             $(window).scroll(function () {
                 scroll = $(window).scrollTop();
@@ -30,15 +31,32 @@ class HeaderComponent extends Component {
                     if (!flag) {
                         $("nav").css({ "transition": " 0.2s", "background": "rgba(10,10,10,.9)"});
                         $(".contenedorUserHeader").css({"transition":"0.2s","background":"rgba(10,10,10,.9)"});
+   
+                        $(".FloatDownButton").css({"display": "flex"});
                         flag = true;
                     }
                 } else {
                     if (flag) {
                         $("nav").css({ "background-color": "transparent", "opacity": "1" });
                         $(".contenedorUserHeader").css({ "transition": "0.2s", "background": "rgba(10,10,10,.1)"});
+
+                        $(".FloatDownButton").css({"display":"none"});
                         flag = false;
                     }
                 }
+
+                if (scroll > 100) {
+                    if (!flag2) {
+                        $(".FloatButtonContainer").css({ "transform": "translate(0, 0)" });
+                        flag2 = true;
+                    }
+                } else {
+                    if (flag2) {
+                        $(".FloatButtonContainer").css({ "transform": "translate(500px, 0)" });
+                        flag2 = false;
+                    }
+                }
+
 
             });
         });
@@ -60,6 +78,7 @@ class HeaderComponent extends Component {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 document.getElementById('logout').style.display = 'true';
+                document.getElementById("FloatButtonContainer").style.display='true';
                 document.getElementById('registrarse').style.display = 'none';
                 document.getElementById('inicarsesion').style.display = 'none';
 
@@ -68,6 +87,7 @@ class HeaderComponent extends Component {
             } else {
                 document.getElementById('logout').style.display = 'none';
                 document.getElementById('UserActivo').style.display = "none";
+                document.getElementById("FloatButtonContainer").style.display = 'none';
             }
 
         });
@@ -90,7 +110,7 @@ class HeaderComponent extends Component {
                         <div className="contenedorUserHeader ocultar" id="cont">
                             <a onClick={this.openLoginModal} id="inicarsesion">Iniciar sesion</a>
                             <a onClick={this.openSignUpModal} id="registrarse">Registrarse</a>
-                            <div className="userActivoContainer" id="UserActivo"></div>
+                            <div onClick={this.openEditModal} className="userActivoContainer" id="UserActivo"></div>
                             <a onClick={this.Desactivarusuario} id="logout">Logout</a>
                         </div>  
                             <div className="contenedorIcono" onClick={this.openSearchModal}>
@@ -114,6 +134,10 @@ class HeaderComponent extends Component {
                 })
               cnt.classList.remove("ocultar");
             }
+    }
+    openEditModal(){
+        let modal = document.getElementById("EditUser");
+        modal.setAttribute("open", true)
     }
     openSearchModal(){
         let modal = document.getElementById("SearchModal");

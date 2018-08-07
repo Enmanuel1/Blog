@@ -8,7 +8,8 @@ class Nosotros extends Component {
 		return(
 			<div className="content">
 			<div className="title">
-			<h3 className="fas fa-user-friends"> Nostros </h3>
+				<i className="fas fa-user-friends"> </i>
+				<h3>Nostros</h3>
 			</div>
 
 			<div className="info">
@@ -18,7 +19,8 @@ class Nosotros extends Component {
 			</div>
 
 			<div className="title">
-			<h3 className="fas fa-exclamation-triangle"> Reglas</h3>
+				<i className="fas fa-exclamation-triangle"> </i>
+				<h3>Reglas</h3>
 			</div>
 
 			<div className="info">

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import HeaderComponent from './Components/HeaderComponent'
 import Post from './Components/PostComponent'
+/*Modales*/
 import LoginModal from "./Components/LogInComponent";
 import SignUpModal from "./Components/SignUpComponent";
 import SearchModal from './Components/SearchComponent'
+import EditModal from "./Components/EditUser";
+import CreatePostModal from './Components/CreatePost'
+/*Paginas*/
 import PostPage from './Components/Post'
 import OffTopicPage from "./Components/OffTopic";
 import NosotrosPage from "./Components/Nosotros";
@@ -24,6 +28,8 @@ class App extends Component {
               <LoginModal />
               <SignUpModal />
               <SearchModal />
+              <EditModal/>
+              <CreatePostModal/>
                   <div className="header">
                     <HeaderComponent />
                   </div>
@@ -43,8 +49,7 @@ class App extends Component {
                  () => {
                   return (
                     <div>
-                  <h1>Articulos Recientes</h1>
-                  <Post />
+                      <Post pageTitle ="Articulos Recientes" />
                       </div>
                   )
                  }
