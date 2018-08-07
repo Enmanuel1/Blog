@@ -1,0 +1,93 @@
+.App{
+  background:#f4f8fb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track{
+  background:#232323;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background:#4a69bd;
+
+}
+.banner{
+  background-image:url("../Images/correct2-too-small.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header{
+  width:100%;
+  height: 15%;
+  position: fixed;
+}
+.slogan-container{
+  width:100%;
+  height: 85%;
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.slogan-title{
+  width:100%;
+  height: 15%;
+  font-size: 40px;
+  color:#fff;
+  text-align: center;
+  margin-top:150px;
+}
+.slogan{
+  width:35%;
+  font-size: 19px;
+  color:#d8d8d6;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;  
+}
+.buttonContainer{
+  width:100%;
+  height:15%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.floatButton{
+  position: relative;
+  z-index: 0;
+  transform: translate(0%,50%);
+  background:#4a69bd;
+  width:55px;
+  height:55px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.downbutton{
+  width:30px;
+}
+.body{
+  width: 100%;
+}
+.body h1{
+  width:100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:25px;
+  margin-bottom:15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 630;
+  letter-spacing: 0.3px;
+}

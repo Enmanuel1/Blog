@@ -1,0 +1,199 @@
+.modal{
+    width:100%;
+    height: 100vh;
+    border:none;
+    position: fixed;
+    z-index: 100;
+    background: transparent;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,.8);
+}
+.modalContent{
+    width: 25%;
+    height: 75%;
+    background:#fff;
+}
+.searchModalContianer{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    background:rgba(0,0,0,.6);
+}
+.formModal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    flex-flow:row wrap;
+}
+.formModal img{
+    transform: translate(20px,20px);
+}
+.formModal input{
+    width:45%;
+    height: 60px;
+    text-align: center;
+    border:none;
+    border-bottom: solid 1px;
+    color:#fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    background:transparent;
+    outline:none;
+    padding:15px;
+}
+.modalHeader{
+    width:100%;
+    height: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.modalClose{
+    width:100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.closeButton{
+    width:30px;
+    margin:5px;
+    cursor:pointer;
+}
+.closeSearcher{
+    margin-right: 20px;
+}
+.modalTitle{
+    width:100%;
+    height: 85%;
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.modalLogo{
+    width: 70px;
+    margin-bottom: 20px;
+}
+.modalTitle h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+}
+.content{
+    width: 100%;
+    height: 60%;
+}
+.authInputLogin{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.authInputLogin input {
+    width:60%;
+    padding:10px 10px 10px 10px;
+    border: none;
+    border-bottom: solid 1px #c0c0c1;
+    margin:20px;
+    background: none;
+    outline:none;
+    text-align: center;
+    border-bottom: 1.5px solid;
+}   
+.authInputLogin input:focus{
+    transition:0.2s linear;
+    border-bottom: 1.5px solid #4a69bd;
+}
+.authButtonsLogin{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+}
+.btn{
+    height: 30px;
+    width:40%;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    border-radius: 3px;
+    background:#202020;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    transition:0.3s ease-in;
+}
+.btn:hover{
+    background:#fff;
+    border:solid 2px #202020;
+    color:#000;
+    transition:0.3s ease-out;
+    font-size: 15px;
+}
+.googlebtn{
+    background:#ba0b05;
+}
+.googlebtn:hover{
+    border:solid 2px #ba0b05;
+    color:#ba0b05;
+}
+.or{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.or img{
+    width:30px;
+}
+
+
+/*Register zone*/
+.authInputRegister{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.authInputRegister input {
+    width:60%;
+    padding:10px 10px 10px 10px;
+    border: none;
+    border-bottom: solid 1px #c0c0c1;
+    margin:10px;
+    background: none;
+    outline:none;
+    text-align: center;
+    border-bottom: 1.5px solid;
+}   
+.authInputRegister input:focus{
+    transition:0.2s linear;
+    border-bottom: 1.5px solid #4a69bd;
+}
+.authButtonsRegister{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+}
