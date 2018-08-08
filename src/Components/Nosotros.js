@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import '../css/Nosotros.css'
-
+import FloatButton from './FloatButtonComponent'
 class Nosotros extends Component {
 
 	render(){
 
 		return(
 			<div className="content">
+			<FloatButton />
 			<div className="title">
 				<i className="fas fa-user-friends"> </i>
 				<h3>Nostros</h3>

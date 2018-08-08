@@ -25,6 +25,11 @@ class HeaderComponent extends Component {
             var flag = false;
             var flag2 = false;
             var scroll;
+            $(".FloatDownButton").click(function(){
+                $('body,html').animate({
+                    scrollTop:'0px'
+                },300);
+            });
             $(window).scroll(function () {
                 scroll = $(window).scrollTop();
                 if (scroll > 569) {
@@ -75,10 +80,10 @@ class HeaderComponent extends Component {
 
     render(){
         let useremail;
+
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 document.getElementById('logout').style.display = 'true';
-                document.getElementById("FloatButtonContainer").style.display='true';
                 document.getElementById('registrarse').style.display = 'none';
                 document.getElementById('inicarsesion').style.display = 'none';
 
@@ -87,7 +92,6 @@ class HeaderComponent extends Component {
             } else {
                 document.getElementById('logout').style.display = 'none';
                 document.getElementById('UserActivo').style.display = "none";
-                document.getElementById("FloatButtonContainer").style.display = 'none';
             }
 
         });

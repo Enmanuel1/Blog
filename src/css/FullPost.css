@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.FullPostContainer{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    background:#fff;
+}
+.FullpostHeader{
+    width:100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.bannerpost{
+    width:100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bannerpost img{
+    width:90%;
+    height: 100%;
+}
+.FullpostDescription{
+    width:100%;
+    height: auto;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    transform: translate(0,-120px);
+    align-items: center;
+    flex-flow:column nowrap;
+    background:red;
+}
+.description{
+    width:80%;
+    height: 100%;
+    background:#fff;
+    border:solid 2px;
+    padding: 30px;
+    letter-spacing: 0.9px;
+    z-index: -10;
+}
+.postComents{
+    width:100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    overflow: auto;
+}
+.comentButton{
+    width:85%;
+    height: 0px;
+    position: absolute;
+}
+.comentButton button{
+    width:100px;
+    height: 40px;
+    border:1px solid #000;
+    border-radius: 5px;
+    transform:translate(0px,-80px);
+    cursor:pointer;
+    outline:none;
+    background:#fff;
+}
+.comentButton Button:hover{
+    background:#000;
+    color:#fff;
+    transition:0.3s ease-in;
+}
+.coments{
+    width:85%;
+    height: 30%;
+    margin:20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.iconUser{
+    width: 10%;
+    height: 100%;
+}
+.comentBody{
+    width: 80%;
+    height: 100%;
+}
+.comentHeader{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.calificacion{
+    width:10%;
+    height: 100%;
+    text-align: center;
+}
+.tituloCailificacion{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

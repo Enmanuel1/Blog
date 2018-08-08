@@ -27,6 +27,7 @@
   width:100%;
   height: 15%;
   position: fixed;
+  z-index: 99;
 }
 .slogan-container{
   width:100%;

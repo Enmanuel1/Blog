@@ -6,6 +6,19 @@ import firebase from 'firebase'
 class EditUser extends Component{
 
     
+    actualizar() {
+        let nombre = document.getElementById("UsuarioNombre").value
+        let user = firebase.auth().currentUser
+
+        user.updateProfile({
+            displayName: nombre,
+        }).then(() => {
+            alert("datos actualizados")
+            window.location.reload(true)
+        }).catch(error => alert(error.message))
+
+    }
+
     render() {
         let useremail, nombre;
         firebase.auth().onAuthStateChanged((user) => {
@@ -37,7 +50,7 @@ class EditUser extends Component{
                                 <input type="email" placeholder="Correo electronico" id="UUsuarioEmail" required />
                             </div>
                             <div className="authButtonsRegister">
-                                <button className="btn">Aceptar</button>
+                                <button className="btn" onClick={this.actualizar}>actualizar</button>
                                 
                             </div>
                         </div>
