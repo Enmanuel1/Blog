@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Posts from './PostComponent'
 import FloatButton from './FloatButtonComponent'
+import '../css/PostComponent.css'
 import firebase from 'firebase';
 class Post extends Component{
 	state = {posts:[]}
@@ -34,6 +35,10 @@ render(){
 */
 	return(
 			<div className="Post">
+			
+			<div className="Content">
+				<div className="postMainContainer">
+					<h1>Posts</h1>
 			{
 				posts?
 				posts.map(item =>(
@@ -47,7 +52,9 @@ render(){
 				))
 				: <h2>Ningún post creado</h2>
 			}
-				<Posts/>
+					</div>
+				</div>
+
 				<FloatButton/>
 			</div>
 		);

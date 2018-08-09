@@ -5,45 +5,67 @@ import logo from "../Images/Logo.png";
 import firebase from 'firebase'
 class CreatePost extends Component {
 
-    
     constructor(){
         super()
         this.state = {
             post : {},
             picture: null,
+            estado : false
         }
         this.getData = this.getData.bind(this)
         this.handleUpload = this.handleUpload.bind(this)
     }
 
-
-
     handleUpload(event){
         const file = event.target.files[0]
         const storageRef = firebase.storage().ref(`/fotos/${file.name}`)
         const task = storageRef.put(file)
-
         task.on("state_changed", snapshot => {
-
             storageRef.getDownloadURL().then(url => {
                 this.setState({
                     picture: url,
+                    estado: true
                 });
-                alert("La imagen ya se cargo")
+                
             });
         })
+        if (this.state.estado) {
+            alert("La imagen cargo")
+            this.setState({
+                estado:false
+            })
+        }else{
+            console.log("La imagen no cargo")
+        }
     }
     getData() {
+        //we get the current user on session
+        let displayName = firebase.auth().currentUser.displayName;
+        let avatar = firebase.auth().currentUser.photoURL;
+
         let titulo = document.getElementById("titulo").value
         let descripcion = document.getElementById("descripcion").value
         let picture = this.state.picture
-        this.setState({
-            post : {titulo,descripcion,picture}
+        let imgPath = picture? picture:'';
+        
+        
+        //we are going to replace the white spaces on 'titulo'
+        // with underscore and send it to the database
+        let _post = titulo.split(' ').join('_');
+      
+       
+        firebase.database().ref(`posts/${_post}`).set({
+            titulo,
+            descripcion,
+            imgPath,
+            author:{displayName, avatar}
+        }).catch(err =>{
+            console.error(err);
         })
-        firebase.database().ref("posts/").push().set({
-            post: this.state.post
-        })
-        console.log(this.state.post)
+       
+        titulo = '';
+        descripcion = '';
+        
     }
     render(){
         return <dialog className="modal" id="AddPostModal">
@@ -73,7 +95,7 @@ class CreatePost extends Component {
                 </div>
               </div>
             </div>
-          </dialog>;
+          </dialog>
     }
 
     close() {

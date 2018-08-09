@@ -4,11 +4,14 @@
 }
 .postMainContainer{
     width: 78%;
-    height: 200vh;
+    min-height: 160vh;
     display: flex;
     flex-flow: row wrap;
     margin:0 auto;
     justify-content: space-around;
+}
+.prueba{
+    height: 20%;
 }
 .postContainer{
     width:300px;
@@ -54,6 +57,7 @@
     height: 25%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 .postDescription p{
     width: 85%;

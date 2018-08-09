@@ -8,10 +8,10 @@ class PostComponent extends Component {
         let {title,postImg, description, authorName, authorAvatar} = this.props;
         let _title = title? title.split(' ').join('_') : '';
         return(
-          <Link to={`/fullPost/${_title}`} >
-            <div className="Content">
-            <h1>{this.title}</h1>
-            <div className="postMainContainer">
+
+            <div className="prueba">
+
+            <Link to={`/fullPost/${_title}`} >
             <div className="postContainer">
               <div className="postImage">
                 <img src={postImg? postImg: image} alt={title} />
@@ -33,11 +33,9 @@ class PostComponent extends Component {
                 <div className="AuthorName">{authorName}</div>
               </div>
             </div>
-          </div>
-            
+              </Link>
             
             </div>
-            </Link>
 
           );
     }

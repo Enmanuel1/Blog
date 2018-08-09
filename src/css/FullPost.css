@@ -29,85 +29,126 @@
     width:90%;
     height: 100%;
 }
-.FullpostDescription{
+.FullPostDescriptionContainer{
     width:100%;
-    height: auto;
-    min-height: 300px;
-    position: relative;
-    display: flex;
-    transform: translate(0,-120px);
-    align-items: center;
-    flex-flow:column nowrap;
-    background:red;
-}
-.description{
-    width:80%;
-    height: 100%;
-    background:#fff;
-    border:solid 2px;
-    padding: 30px;
-    letter-spacing: 0.9px;
-    z-index: -10;
-}
-.postComents{
-    width:100%;
-    height: 50vh;
+    height: 600px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-flow: row wrap;
-    overflow: auto;
-}
-.comentButton{
-    width:85%;
-    height: 0px;
-    position: absolute;
-}
-.comentButton button{
-    width:100px;
-    height: 40px;
-    border:1px solid #000;
-    border-radius: 5px;
-    transform:translate(0px,-80px);
-    cursor:pointer;
-    outline:none;
-    background:#fff;
-}
-.comentButton Button:hover{
-    background:#000;
-    color:#fff;
-    transition:0.3s ease-in;
-}
-.coments{
-    width:85%;
-    height: 30%;
-    margin:20px;
-    display: flex;
-    flex-flow: row wrap;
-}
-.iconUser{
-    width: 10%;
-    height: 100%;
-}
-.comentBody{
-    width: 80%;
-    height: 100%;
-}
-.comentHeader{
-    width: 100%;
-    height: 30px;
-    display: flex;
     align-items: center;
+    flex-flow: column nowrap;
+    
 }
-.calificacion{
+.FullPostDescription{
+    width:80%;
+    height: 70%;
+    background:#fff;
+    border:solid 1px;
+    transform:translate(0,-30%);
+    overflow: auto;
+    padding:20px;
+    text-align: justify;
+}
+.ComentButton{
+    width: 80%;
+}
+.ComentButton button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid;
+    background:#fff;
+    cursor: pointer;
+    outline:none;
+    margin-right: 20px;
+}
+.ComentButton button:hover{
+    background:#101010;
+    color:#fff;
+    border:transparent;
+    transition: .2s ease-in;
+}
+.FullPostComentContainer{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column ;
+}
+.FullPostComent{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 20px;
+}
+.ComentIcontContainer{
     width:10%;
     height: 100%;
-    text-align: center;
+
 }
-.tituloCailificacion{
+.ComentIcontContainer img{
+    width: 100%;
+    height: 100%;
+}
+.ComentBodyContainer{
+    width: 90%;
+    height: 100%;
+
+}
+.ComentHeader{
     width: 100%;
     height: 30%;
+
+    display: flex;
+}
+.ComentTitle{
+    width:85%;
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.comentScore{
+    width:15%;
+    height: 100%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.ComentBody{
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+.Coment{
+    width: 85%;
+    height:100%;
+    padding-left: 10px;
+}
+.ComentRate{
+    width:15%;
+    height: 100%;
+
+    display: flex;
+}
+.goodRate {
+    width:50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.badRate{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goodRate img{
+    width: 50%;
+}
+.badRate img{
+    width: 50%;
 }

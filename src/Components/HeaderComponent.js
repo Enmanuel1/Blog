@@ -107,7 +107,7 @@ class HeaderComponent extends Component {
                         <Link to="/">Inicio</Link>
                         <Link to="/post">Post</Link>
                         <Link to="/offTopic">Off topic</Link>
-                        <Link to="/nosotros">Nostros</Link>
+                        <Link to="/nosotros">Nosotros</Link>
                         <div className="contenedorIcono" onClick={this.displayUser}>
                             <img src={userImage} alt="userImage" id="userImage"  />
                         </div>
@@ -139,6 +139,7 @@ class HeaderComponent extends Component {
               cnt.classList.remove("ocultar");
             }
     }
+
     openEditModal(){
         let modal = document.getElementById("EditUser");
         modal.setAttribute("open", true)

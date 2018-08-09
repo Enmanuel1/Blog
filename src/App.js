@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HeaderComponent from './Components/HeaderComponent'
 import Post from './Components/PostComponent'
+import FloatButton from './Components/FloatButtonComponent'
 import firebase from 'firebase'
 /*Modales*/
 import LoginModal from "./Components/LogInComponent";
@@ -8,6 +9,8 @@ import SignUpModal from "./Components/SignUpComponent";
 import SearchModal from './Components/SearchComponent'
 import EditModal from "./Components/EditUser";
 import CreatePostModal from './Components/CreatePost'
+import ComentModal from './Components/ComentFormComponent'
+import CreateOffTopicModal from './Components/CreateOffTopic'
 /*Paginas*/
 import PostPage from './Components/Post'
 import OffTopicPage from "./Components/OffTopic";
@@ -56,6 +59,9 @@ class App extends Component {
               <SearchModal />
               <EditModal/>
               <CreatePostModal/>
+              <CreateOffTopicModal/>
+              <ComentModal/>
+              <FloatButton />
                   <div className="header">
                     <HeaderComponent />
                   </div>
@@ -75,6 +81,9 @@ class App extends Component {
                  () => {
                   return (
                     <div>
+                      <div className="Content">
+                        <div className="postMainContainer">
+                          <h1>Articulos Recientes</h1>
                       {
                       posts?posts.map(item =>(
                       <Post 
@@ -88,6 +97,8 @@ class App extends Component {
                         />
                         )): <h2>Ningún post creado</h2>
                       }
+                      </div>
+                      </div>
                       </div>
                   )
                  }
