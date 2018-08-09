@@ -8,45 +8,38 @@ class CreateOffTopic extends Component {
         super()
         this.state = {
             post: {},
-            picture: null,
-            estado: false
+            Offpicture: null,
         }
-        this.getData = this.getData.bind(this)
-        this.handleUpload = this.handleUpload.bind(this)
+        this.getDataOff = this.getDataOff.bind(this)
+        this.handleUploadOff = this.handleUploadOff.bind(this)
     }
 
-    handleUpload(event) {
+    handleUploadOff(event) {
         const file = event.target.files[0]
-        const storageRef = firebase.storage().ref(`/fotos/${file.name}`)
+        const storageRef = firebase.storage().ref(`/offTopic/${file.name}`)
         const task = storageRef.put(file)
         task.on("state_changed", snapshot => {
+            console.log("que passa")
             storageRef.getDownloadURL().then(url => {
+                console.log(url)
                 this.setState({
-                    picture: url,
-                    estado: true
+                    Offpicture: url,
                 });
 
             });
         })
-        if (this.state.estado) {
-            alert("La imagen cargo")
-            this.setState({
-                estado: false
-            })
-        } else {
-            console.log("La imagen no cargo")
-        }
     }
-    getData() {
+    getDataOff() {
         //we get the current user on session
         let displayName = firebase.auth().currentUser.displayName;
         let avatar = firebase.auth().currentUser.photoURL;
 
-        let titulo = document.getElementById("titulo").value
-        let descripcion = document.getElementById("descripcion").value
-        let picture = this.state.picture
-        let imgPath = picture ? picture : '';
-
+        let titulo = document.getElementById("tituloOff").value
+        let descripcion = document.getElementById("descripcionOff").value
+        let pictureoff = this.state.Offpicture
+        let OffimgPath = pictureoff ? pictureoff : '';
+        console.log(pictureoff)
+        console.log(this.state.Offpicture)
 
         //we are going to replace the white spaces on 'titulo'
         // with underscore and send it to the database
@@ -56,7 +49,7 @@ class CreateOffTopic extends Component {
         firebase.database().ref(`offTopic/${_post}`).set({
             titulo,
             descripcion,
-            imgPath,
+            OffimgPath,
             author: { displayName, avatar }
         }).catch(err => {
             console.error(err);
@@ -75,7 +68,7 @@ class CreateOffTopic extends Component {
                         <div className="modalHeader headerAddPost">
                             <div className="modalTitle">
                                 <img src={logo} alt="logo" className="modalLogo" />
-                                <h2>Crea un nuevo post</h2>
+                                <h2>Crea un nuevo post Off Topic</h2>
                             </div>
                         </div>
                         <div className="content addPostContent">
@@ -83,13 +76,13 @@ class CreateOffTopic extends Component {
                                 <img src={close} className="closeButton" alt="close" id="close" onClick={this.close} />
                             </div>
                             <div className="AddPostForm">
-                                <input type="text" placeholder="Titulo del post" id="titulo" />
-                                <textarea placeholder="Descripcion" id="descripcion" />
-                                <label htmlFor="file-upload" className="custom-file-upload">
+                                <input type="text" placeholder="Titulo del post" id="tituloOff"/>
+                                <textarea placeholder="Descripcion" id="descripcionOff"/>
+                                <label htmlFor="file-uploadOff" className="custom-file-upload">
                                     Subir Imagen del post
                                 </label>
-                                <input id="file-upload" type="file" onChange={this.handleUpload} />
-                                <button className="btn addPostButton" id="crearPost" onClick={this.getData} >
+                                <input id="file-uploadOff" type="file" onChange={this.handleUploadOff} />
+                                <button className="btn addPostButton" id="crearPost" onClick={this.getDataOff} >
                                     Crear el post
                                 </button>
                             </div>

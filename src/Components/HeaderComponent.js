@@ -6,6 +6,7 @@ import firebase from 'firebase'
 import userImage from '../Ico-img/user2.png'
 import search from '../Ico-img/search.png'
 import {Link} from 'react-router-dom'
+import downArrow from '../Ico-img/downArrow.png'
 class HeaderComponent extends Component {
 
     constructor(){
@@ -120,6 +121,9 @@ class HeaderComponent extends Component {
                             <div className="contenedorIcono" onClick={this.openSearchModal}>
                             <img src={search} alt="SearchImage" id="SearchImage"  />
                         </div>              
+                    </div>
+                    <div className="FloatDownButton" >
+                        <img src={downArrow} alt="create icon" />
                     </div>
                 </div>
             </nav>

@@ -43,3 +43,6 @@
     width:60%;
     transform:rotate(180deg);
 }
+.ocultarBoton{
+    display:none;
+}

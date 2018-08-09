@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HeaderComponent from './Components/HeaderComponent'
 import Post from './Components/PostComponent'
-import FloatButton from './Components/FloatButtonComponent'
+
 import firebase from 'firebase'
 /*Modales*/
 import LoginModal from "./Components/LogInComponent";
@@ -16,10 +16,12 @@ import PostPage from './Components/Post'
 import OffTopicPage from "./Components/OffTopic";
 import NosotrosPage from "./Components/Nosotros";
 import FullPost from "./Components/FullPost";
+import FullOffTopic from './Components/FullOffTopic';
 import './css/App.css';
 
 import {BrowserRouter as Router} from 'react-router-dom'
 import Route from 'react-router-dom/Route'
+
 
 class App extends Component {
 
@@ -61,7 +63,7 @@ class App extends Component {
               <CreatePostModal/>
               <CreateOffTopicModal/>
               <ComentModal/>
-              <FloatButton />
+              
                   <div className="header">
                     <HeaderComponent />
                   </div>
@@ -105,7 +107,7 @@ class App extends Component {
                  }/>
                 </div>
               </div>
-            
+          <Route path="/fullOffTopic/:postName" component={(props) => <FullOffTopic {...props} />} />
           <Route path="/fullPost/:postName" component={(props)=> <FullPost {...props}/>}/>
           <Route path="/post" exact strict component={PostPage}/>
           <Route path="/offTopic" exact strict component={OffTopicPage} />
