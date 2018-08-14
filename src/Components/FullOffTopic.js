@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import firebase from 'firebase';
 import '../css/FullPost.css'
 import $ from 'jquery'
-import like from '../Ico-img/like.png'
+import Rating from 'react-rating'
+import likeheart from '../Ico-img/star.png'
 import UserImage from '../Ico-img/user.png'
-import dislike from '../Ico-img/dislike.png'
+import likeheartactive from '../Ico-img/star (1).png'
 class FullOffTopic extends Component {
     constructor() {
         super()
@@ -66,9 +67,6 @@ class FullOffTopic extends Component {
                                         <div className="ComentTitle">
                                             {post.author ? post.author.displayName : ''}
                                         </div>
-                                        <div className="comentScore">
-                                       0 
-                                    </div>
                                     </div>
                                     <div className="ComentBody">
                                         <div className="Coment">
@@ -76,11 +74,12 @@ class FullOffTopic extends Component {
                                             return spawn('convert',[tempLocalFile, tempLocalPNGFile]);por algunas opciones? como por ejemplo 75 de calidad y eso?
                                         </div>
                                         <div className="ComentRate">
-                                            <div className="goodRate">
-                                                <img src={like} alt="Like" />
-                                            </div>
-                                            <div className="badRate">
-                                                <img src={dislike} alt="Like" />
+                                        <div className="rating">
+                                            <Rating
+                                              emptySymbol={<img src={likeheart} className="icon" />}
+                                              fullSymbol={<img src={likeheartactive} className="icon" />}
+                                              onChange={(rate) => alert("Acaba de calificar con " + rate + " estrellas este post")}
+                                            />
                                             </div>
                                         </div>
                                     </div>

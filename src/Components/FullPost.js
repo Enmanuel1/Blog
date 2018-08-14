@@ -2,12 +2,15 @@ import React, { Component } from "react";
 import firebase from 'firebase';
 import '../css/FullPost.css'
 import $ from 'jquery'
-import like from '../Ico-img/like.png'
+import Rating from 'react-rating'
+import likeheart from '../Ico-img/star.png'
 import UserImage from '../Ico-img/user.png'
-import dislike from '../Ico-img/dislike.png'
+import likeheartactive from '../Ico-img/star (1).png'
 import ComentFormComponent from "./ComentFormComponent";
 class FullPost extends Component {
 state = {posts:[]}
+
+
     
  
     fetchPost(){
@@ -65,25 +68,27 @@ state = {posts:[]}
                                     <div className="ComentTitle">
                                         {post.author ? post.author.displayName : ''}
                                     </div>
-                                    <div className="comentScore">
-                                    0
-                                    </div>
                                 </div>
                                 <div className="ComentBody">
                                         <div className="Coment">
                                             muy bueno! para hacer optimizacion de imagenes para web con imageMagick se tiene que cambiar
                                             return spawn('convert',[tempLocalFile, tempLocalPNGFile]);por algunas opciones? como por ejemplo 75 de calidad y eso?
                                         </div>
-                                        <div className="ComentRate">
+                                                                                <div className="ComentRate">
                                             <div className="goodRate">
-                                                <img src={like} alt="Like"/>
                                             </div>
-                                            <div className="badRate">
-                                                <img src={dislike} alt="Like" />
+
+                                                                                <div className="rating">
+                                            <Rating
+                                              emptySymbol={<img src={likeheart} className="icon" />}
+                                              fullSymbol={<img src={likeheartactive} className="icon" />}
+                                              onChange={(rate) => alert("Acaba de calificar con " + rate + " estrellas este post")}
+                                            />
                                             </div>
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                             <div className="FullPostComent">
                                 <div className="ComentIcontContainer">
@@ -94,9 +99,6 @@ state = {posts:[]}
                                         <div className="ComentTitle">
                                             {post.author ? post.author.displayName : ''}
                                         </div>
-                                        <div className="comentScore">
-                                            0
-                                    </div>
                                     </div>
                                     <div className="ComentBody">
                                         <div className="Coment">
@@ -105,19 +107,26 @@ state = {posts:[]}
                                         </div>
                                         <div className="ComentRate">
                                             <div className="goodRate">
-                                                <img src={like} alt="Like" />
                                             </div>
-                                            <div className="badRate">
-                                                <img src={dislike} alt="Like" />
-                                            </div>
+
                                         </div>
+                                        <div className="rating">
+                                            <Rating
+                                              emptySymbol={<img src={likeheart} className="icon" />}
+                                              fullSymbol={<img src={likeheartactive} className="icon" />}
+                                              onChange={(rate) => alert("Acaba de calificar con " + rate + " estrellas este post")}
+                                            />
+                                            </div>
                                     </div>
+
                                 </div>
+
                             </div>
+
                     </div>
 
-                        
-                    </div>           
+                    </div>   
+
                // <li>Author: {post.author? post.author.displayName: ''}</li>
                 //<li>Avatar: {post.author? post.author.avatar: ''}</li>
             : <h1>No se pudo encontrar el post</h1>}  
