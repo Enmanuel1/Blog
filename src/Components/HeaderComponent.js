@@ -38,7 +38,7 @@ class HeaderComponent extends Component {
                         $("nav").css({ "transition": " 0.2s", "background": "rgba(10,10,10,.9)"});
                         $(".contenedorUserHeader").css({"transition":"0.2s","background":"rgba(10,10,10,.9)"});
    
-                        $(".FloatDownButton").css({"display": "flex"});
+                        
                         flag = true;
                     }
                 } else {
@@ -46,7 +46,7 @@ class HeaderComponent extends Component {
                         $("nav").css({ "background-color": "transparent", "opacity": "1" });
                         $(".contenedorUserHeader").css({ "transition": "0.2s", "background": "rgba(10,10,10,.1)"});
 
-                        $(".FloatDownButton").css({"display":"none"});
+                       
                         flag = false;
                     }
                 }
@@ -54,11 +54,13 @@ class HeaderComponent extends Component {
                 if (scroll > 100) {
                     if (!flag2) {
                         $(".FloatButtonContainer").css({ "transform": "translate(0, 0)" });
+                        $(".FloatDownButton").css({ "display": "flex" });
                         flag2 = true;
                     }
                 } else {
                     if (flag2) {
                         $(".FloatButtonContainer").css({ "transform": "translate(500px, 0)" });
+                        $(".FloatDownButton").css({ "display": "none" });
                         flag2 = false;
                     }
                 }
@@ -87,7 +89,7 @@ class HeaderComponent extends Component {
                 document.getElementById('logout').style.display = 'true';
                 document.getElementById('registrarse').style.display = 'none';
                 document.getElementById('inicarsesion').style.display = 'none';
-
+            
                 useremail = user.email;
                 document.getElementById('UserActivo').innerHTML = useremail + " ";
             } else {

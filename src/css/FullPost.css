@@ -24,10 +24,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .bannerpost img{
     width:90%;
     height: 100%;
+}
+
+@media screen and (max-width:800px){
+   .bannerpost img{
+        height: 85%;
+    }
+    .FullpostHeader{
+        font-size: 20px;
+        height:100px;
+        width:90%;
+        margin: 0 auto;
+    }
 }
 .FullPostDescriptionContainer{
     width:100%;
@@ -42,11 +55,13 @@
     width:80%;
     height: 70%;
     background:#fff;
-    border:solid 1px;
+    -webkit-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
     transform:translate(0,-30%);
     overflow: auto;
     padding:20px;
-    text-align: justify;
+    text-align: center;
 }
 .ComentButton{
     width: 80%;
@@ -69,49 +84,60 @@
 }
 .FullPostComentContainer{
     width:100%;
+    height: auto;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     flex-flow: column ;
+    justify-content: center;
 }
 .FullPostComent{
-    width: 80%;
-    height: 100px;
+    width: 95%;
+    height: auto;
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 20px;
 }
 .ComentIcontContainer{
-    width:10%;
     height: 100%;
-
+    width:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .ComentIcontContainer img{
-    width: 100%;
-    height: 100%;
+    width: 120px;
+    height: 80%;
+}
+@media screen and (max-width:600px){
+    
+    .ComentIcontContainer img {
+        width: 80px;
+        height: 70%;
+    }
+    .Coment{
+        font-size: 14px;
+    }
 }
 .ComentBodyContainer{
-    width: 90%;
     height: 100%;
 
 }
 .ComentHeader{
     width: 100%;
     height: 30%;
-
     display: flex;
 }
 .ComentTitle{
     width:85%;
     height: 100%;
-    padding-left: 20px;
+    padding-left: 10px;
     display: flex;
+    font-weight: 650;
     align-items: center;
 }
 .comentScore{
     width:15%;
     height: 100%;
-
     display:flex;
     justify-content: center;
     align-items: center;
@@ -151,4 +177,12 @@
 }
 .badRate img{
     width: 50%;
+}
+@media screen and (max-width:900px){
+    .goodRate img{
+        width:0%;
+    }
+    .badRate img {
+        width:0%;
+    }
 }

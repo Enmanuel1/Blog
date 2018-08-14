@@ -49,9 +49,12 @@ render(){
 					authorName={item.post.author.displayName}
 					authorAvatar={item.post.author.avatar}
 					/>
+					
 				))
 				: <h2>Ningún post creado</h2>
+				
 			}
+
 					</div>
 				</div>
 

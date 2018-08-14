@@ -108,7 +108,7 @@ class App extends Component {
                 </div>
               </div>
           <Route path="/fullOffTopic/:postName" component={(props) => <FullOffTopic {...props} />} />
-          <Route path="/fullPost/:postName" component={(props)=> <FullPost {...props}/>}/>
+          <Route path="/fullPost/:postName" component={(props) => <FullPost {...props} />}/>
           <Route path="/post" exact strict component={PostPage}/>
           <Route path="/offTopic" exact strict component={OffTopicPage} />
           <Route path="/nosotros" exact strict component={NosotrosPage} />

@@ -4,11 +4,9 @@ import '../css/FullPost.css'
 import like from '../Ico-img/like.png'
 import UserImage from '../Ico-img/user.png'
 import dislike from '../Ico-img/dislike.png'
+import ComentFormComponent from "./ComentFormComponent";
 class FullPost extends Component {
-    constructor(){
-        super()
-        this.state = { post: {} }
-    }
+    state = {posts:[]}
     
  
     fetchPost(){
@@ -30,13 +28,17 @@ class FullPost extends Component {
     render() {
         
         let {post}= this.state;
-        console.log(post)
     
+
         return (
+
             <div>
+
             { post ?
+
                 <div className="FullPostContainer">
                     <div className="FullpostHeader">{post.titulo}</div>
+                        {<ComentFormComponent titlex={post.titulo}/>}
                     <div className="bannerpost"><img src={post.imgPath} alt=""/></div>
                     <div className="FullPostDescriptionContainer">
                         <div className="FullPostDescription">
@@ -50,8 +52,6 @@ class FullPost extends Component {
                     <div className="FullPostComentContainer">
                         <div className="FullPostComent">
                             <div className="ComentIcontContainer">
-
-                                
                                 <img src={post.author? post.author.avatar:UserImage} alt="User"/>
                             </div>
                             <div className="ComentBodyContainer">
@@ -79,7 +79,35 @@ class FullPost extends Component {
                                 </div>
                             </div>
                         </div>
-                        
+                            <div className="FullPostComent">
+                                <div className="ComentIcontContainer">
+                                    <img src={post.author ? post.author.avatar : UserImage} alt="User" />
+                                </div>
+                                <div className="ComentBodyContainer">
+                                    <div className="ComentHeader">
+                                        <div className="ComentTitle">
+                                            {post.author ? post.author.displayName : ''}
+                                        </div>
+                                        <div className="comentScore">
+                                            0
+                                    </div>
+                                    </div>
+                                    <div className="ComentBody">
+                                        <div className="Coment">
+                                            muy bueno! para hacer optimizacion de imagenes para web con imageMagick se tiene que cambiar
+                                            return spawn('convert',[tempLocalFile, tempLocalPNGFile]);por algunas opciones? como por ejemplo 75 de calidad y eso?
+                                        </div>
+                                        <div className="ComentRate">
+                                            <div className="goodRate">
+                                                <img src={like} alt="Like" />
+                                            </div>
+                                            <div className="badRate">
+                                                <img src={dislike} alt="Like" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
 
                         

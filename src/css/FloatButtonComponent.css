@@ -23,18 +23,21 @@
 }
 .FloatDownButton{
     background:rgba(10,10,10,.9);
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     display: none;
     justify-content: center;
     align-items: center;
     border-radius:50px;
     position: fixed;
-    top:75px;
-    left:48.5%;
+    bottom: 85px;
+    right: -30px;
     cursor: pointer;
     z-index: 99;
+    margin-right: 50px;
 }
+
+
 .FloatDownButton:hover{
     background:#202023;
     transition:0.5s ease;
