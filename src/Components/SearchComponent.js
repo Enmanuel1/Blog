@@ -14,7 +14,7 @@ class SearchComponent extends Component {
                             <img src={close} className="closeButton closeSearcher" alt="close" id="close" onClick={this.close} />
                         </div>
                         <div className="formModal">
-                            <input type="text" placeholder="¿Qué estás buscando?"/>
+                            <input type="search" placeholder="¿Qué estás buscando?"/>
                             <img src={search} alt="searchImg"/>
                         </div>
                     </div>
