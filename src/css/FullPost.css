@@ -155,7 +155,8 @@
 .ComentRate{
     width:15%;
     height: 100%;
-
+        transform: rotate(-90deg);
+    margin-top: -2%;
     display: flex;
 }
 .goodRate {

@@ -7,6 +7,7 @@ class SearchComponent extends Component {
 
     render(){
         return(
+            <form className="SearchForm">
             <dialog className="modal" id="SearchModal" >
                 <div className="container">
                     <div className="searchModalContianer">
@@ -14,12 +15,13 @@ class SearchComponent extends Component {
                             <img src={close} className="closeButton closeSearcher" alt="close" id="close" onClick={this.close} />
                         </div>
                         <div className="formModal">
-                            <input type="search" placeholder="¿Qué estás buscando?"/>
+                            <input type="search" id="search" onChange={this.props.onSearch} placeholder="¿Qué estás buscando?"/>
                             <img src={search} alt="searchImg"/>
                         </div>
                     </div>
                 </div>
             </dialog>
+            </form>
         )
     }
 

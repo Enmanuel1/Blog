@@ -39,6 +39,7 @@ class CreatePost extends Component {
         }
     }
     getData() {
+
         //we get the current user on session
         let displayName = firebase.auth().currentUser.displayName;
         let avatar = firebase.auth().currentUser.photoURL;
@@ -53,7 +54,7 @@ class CreatePost extends Component {
         // with underscore and send it to the database
         let _post = titulo.split(' ').join('_');
       
-       
+       if (titulo != "" && descripcion != ""){
         firebase.database().ref(`posts/${_post}`).set({
             titulo,
             descripcion,
@@ -62,9 +63,14 @@ class CreatePost extends Component {
         }).catch(err =>{
             console.error(err);
         })
-       
+       window.location.reload(true);
         titulo = '';
         descripcion = '';
+    }else{
+
+
+        alert("Punto y Coma \nComplete todos los campos para poder publicar el post");
+    }
         
     }
     render(){

@@ -27,7 +27,14 @@ class App extends Component {
 
   constructor() {
     super()
-    this.state = { posts: [] }
+    this.state = { posts: [],
+        filter: {
+          title: '',
+          search: ''
+        }
+     }
+
+    this.handleOnSearch = this.handleOnSearch.bind(this);
   }
 
   getPosts() {
@@ -42,6 +49,21 @@ class App extends Component {
     });
 
   }
+
+  handleOnSearch(e){
+    let newFilter = Object.assign( {}, this.state.filter, {[e.target.id]:[e.target.value]} )
+
+    this.setState({
+      filter: newFilter
+    })
+
+    console.log(newFilter);
+  }
+
+  handleOnFilter(filter, data){
+
+  }
+
 
   componentWillMount() {
     this.getPosts();
@@ -58,7 +80,7 @@ class App extends Component {
               <div className="banner">
               <LoginModal />
               <SignUpModal />
-              <SearchModal />
+              <SearchModal onSearch={this.handleOnSearch}/>
               <EditModal/>
               <CreatePostModal/>
               <CreateOffTopicModal/>
@@ -96,6 +118,7 @@ class App extends Component {
                         description={item.post.descripcion}
                         authorName={item.post.author.displayName}
                         authorAvatar={item.post.author.avatar}
+                        
                         />
                         )): <h2>Ningún post creado</h2>
                       }
@@ -114,6 +137,8 @@ class App extends Component {
           <Route path="/nosotros" exact strict component={NosotrosPage} />
         </div>
       </Router>
+
+
       );
   }
 }
