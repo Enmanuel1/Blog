@@ -17,7 +17,7 @@ class HeaderComponent extends Component {
         this.displayUser = this.displayUser.bind(this)
     }
 
-    refresh() {
+refresh() {
         window.location.reload(true);
     }
 
@@ -101,7 +101,7 @@ class HeaderComponent extends Component {
         return(
             <nav className="menu">
                 <div className="Titulo-menu">
-                    <img src={logo} className="logo" alt="logo"/>
+                    <Link to="/"><img src={logo} className="logo" alt="logo"/></Link>
                     <span>Punto y coma</span>
                 </div>
 

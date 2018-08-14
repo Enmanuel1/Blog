@@ -3,7 +3,7 @@ import '../css/Nosotros.css'
 
 class Nosotros extends Component {
 
-	render(){
+render(){
 
 		return(
 			<div className="content">
@@ -51,7 +51,7 @@ class Nosotros extends Component {
 				<li>Se envíen desde robots informáticos con la intención de generar ruido; serán considerados spam y se eliminarán.</li>
 				</ul>
 				<br></br>
-				<p>El usuario que tuviera conocimiento de que cualquier clase de contenido del Blog o facilitado a través del mismo es contrario a la legalidad, a las Normas o a las exigencias de la buena fe, podrá ponerlo en conocimiento de la Sociedad escribiendo un correo a&nbsp;<a href="mailto:20163633@itla.edu.do"><u>puntoycoma@gmail.com</u></a>, sin que ello suponga ningún tipo de obligación o responsabilidad para Punto y Coma.</p>
+				<p>El usuario que tuviera conocimiento de que cualquier clase de contenido del Blog o facilitado a través del mismo es contrario a la legalidad, a las Normas o a las exigencias de la buena fe, podrá ponerlo en conocimiento de la Sociedad escribiendo un correo a&nbsp;<a href="mailto:reportespuntoycoma@gmail.com"><u>reportespuntoycoma@gmail.com</u></a>, sin que ello suponga ningún tipo de obligación o responsabilidad para Punto y Coma.</p>
 				<br></br>
 				<br></br>
 				<p><strong>IV. Responsabilidad</strong></p>

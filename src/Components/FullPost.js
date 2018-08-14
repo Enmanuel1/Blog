@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import firebase from 'firebase';
 import '../css/FullPost.css'
+import $ from 'jquery'
 import like from '../Ico-img/like.png'
 import UserImage from '../Ico-img/user.png'
 import dislike from '../Ico-img/dislike.png'
 import ComentFormComponent from "./ComentFormComponent";
 class FullPost extends Component {
-    state = {posts:[]}
+state = {posts:[]}
     
  
     fetchPost(){
@@ -20,6 +21,11 @@ class FullPost extends Component {
             this.setState({post:snapshot.val()});
         })
        
+    }
+        reporte(){
+        alert("Usted acaba de realizar un reporte \nAntes de continuar: \nPunto y Coma no se responsabiliza de la exactitud, veracidad, vigencia, licitud o relevancia de los posts publicados por cualquier usuario del Blog, ni de las opiniones y comentarios remitidos por los usuarios acerca de dichos posts. En este sentido, Punto y Coma tiene la facultad, pero no la obligación, de controlar el uso del Blog y sus contenidos, que son de la exclusiva responsabilidad de los usuarios que los formulen.");
+        $('#reporte').attr("disabled", true);
+        window.location.href="mailto:reportespuntoycoma@gmail.com?Subject=Reporte%20Post"
     }
 
     componentWillMount(){
@@ -46,7 +52,7 @@ class FullPost extends Component {
                         </div>    
                         <div className="ComentButton">
                                 <button onClick={this.openComentModal}>Comentar</button>
-                                <button>Reportar</button>
+                                <button onClick={this.reporte} id="reporte">Reportar</button>
                         </div>
                     </div>
                     <div className="FullPostComentContainer">
