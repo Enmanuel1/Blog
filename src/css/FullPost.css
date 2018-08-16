@@ -1,0 +1,503 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.FullPostContainer{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    background:#fff;
+}
+.FullpostHeader{
+    width:100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.bannerpost{
+    width:100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bannerpost img{
+    width:90%;
+    height: 100%;
+}
+
+@media screen and (max-width:800px){
+   .bannerpost img{
+        height: 85%;
+    }
+    .FullpostHeader{
+        font-size: 20px;
+        height:100px;
+        width:90%;
+        margin: 0 auto;
+    }
+}
+.FullPostDescriptionContainer{
+    width:100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    
+}
+.FullPostDescription{
+    width:80%;
+    height: 70%;
+    background:#fff;
+    -webkit-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 0px 23px -1px rgba(0,0,0,0.75);
+    transform:translate(0,-30%);
+    overflow: auto;
+    padding:20px;
+    text-align: center;
+}
+.ComentButton{
+    width: 80%;
+}
+.ComentButton button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid;
+    background:#fff;
+    cursor: pointer;
+    outline:none;
+    margin-right: 20px;
+}
+.ComentButton button:hover{
+    background:#101010;
+    color:#fff;
+    border:transparent;
+    transition: .2s ease-in;
+}
+.FullPostComentContainer{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column ;
+    justify-content: center;
+}
+.FullPostComent{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 20px;
+}
+.ComentIcontContainer{
+    height: 100%;
+    width:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ComentIcontContainer img{
+    width: 120px;
+    height: 80%;
+}
+@media screen and (max-width:600px){
+    
+    .ComentIcontContainer img {
+        width: 80px;
+        height: 70%;
+    }
+    .Coment{
+        font-size: 14px;
+    }
+}
+.ComentBodyContainer{
+    height: 100%;
+    width:80%;
+
+}
+.ComentHeader{
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+.ComentTitle{
+    width:85%;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    font-weight: 650;
+    align-items: center;
+}
+.comentScore{
+    width:15%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.ComentBody{
+    width: 95%;
+    height: 70%;
+    display: flex;
+}
+.Coment{
+    width: 85%;
+    height:100%;
+    padding-left: 10px;
+}
+.ComentRate{
+    width:15%;
+    height: 100%;
+    transform: rotate(-90deg);
+    margin-top:-2%;
+    display: flex;
+}
+.goodRate {
+    width:50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badRate{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goodRate img{
+    width: 50%;
+}
+.badRate img{
+    width: 50%;
+}
+@media screen and (max-width:1120px){
+    .rating{
+        display:none;
+    }
+}
+
+.rating{
+    width: 10%;
+}
+.ElmalditoModal{
+    background:red;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+
+
+
+.modalx{
+    width:100%;
+    height: 100vh;
+    border:none;
+    position: absolute;
+    transform:translate(0,100vh);
+    z-index: 100;
+    background: transparent;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,.8);
+}
+.modalContent{
+    width: 25%;
+    height: 75%;
+    background:#fff;
+}
+.formModal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    flex-flow:row wrap;
+}
+.formModal img{
+    transform: translate(20px,20px);
+}
+.formModal input{
+    width:45%;
+    height: 60px;
+    text-align: center;
+    border:none;
+    border-bottom: solid 1px;
+    color:#fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    background:transparent;
+    outline:none;
+    padding:15px;
+}
+@media screen and (max-width:820px){
+    .formModal input{
+        font-size:20px;
+    }
+    .formModal img{
+        width:40px;
+    }
+}
+.modalHeader{
+    width:100%;
+    height: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.headerAddPost{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#000;
+    color:#fff;
+}
+@media screen and (max-width:600px){
+    .headerAddPost{
+        display:none;
+    }
+}
+.modalClose{
+    width:100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.closeButton{
+    width:30px;
+    margin:5px;
+    cursor:pointer;
+}
+.closeSearcher{
+    margin-right: 20px;
+}
+.modalTitle{
+    width:100%;
+    height: 85%;
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.modalLogo{
+    width: 70px;
+    margin-bottom: 20px;
+}
+.modalTitle h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+}
+.content{
+    width: 100%;
+    height: 60%;
+}
+.addPostContent{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.AddPostForm{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.AddPostForm input {
+    width: 70%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    height: 35px;
+    background:transparent;
+    border:none;
+    border-bottom: solid 1.5px;
+    color:#000;
+    text-align: center;
+    outline:none;
+}
+.AddPostForm input[type="file"]{
+    display: none;
+}
+.custom-file-upload {
+    margin-top:20px;
+    border:none;
+    display: inline-block;
+    color:#fff;
+    cursor:pointer;
+    border-radius: 3px;
+    background:#880d0d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    width: 70%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddPostForm textarea{
+    max-width: 70%;
+    min-width: 70%;
+    max-height: 50%;
+    min-height: 50%;
+    outline:none;
+    text-align: center;
+    border: solid 1.5px;
+    margin-top:20px;
+    overflow-y:hidden;
+}
+
+.AddPostForm input:focus{
+    transition:0.2s linear;
+    border-bottom: 1.5px solid #4a69bd;
+}
+.AddPostForm textarea:focus{
+    transition:0.2s linear;
+    border: 1.5px solid #4a69bd;
+}
+.authInputLogin{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.authInputLogin input {
+    width:60%;
+    padding:10px 10px 10px 10px;
+    border: none;
+    border-bottom: solid 1px #c0c0c1;
+    margin:20px;
+    background: none;
+    outline:none;
+    text-align: center;
+    border-bottom: 1.5px solid;
+}   
+.authInputLogin input:focus{
+    transition:0.2s linear;
+    border-bottom: 1.5px solid #4a69bd;
+}
+.authButtonsLogin{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+}
+.btn{
+    height: 30px;
+    width:40%;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    border-radius: 3px;
+    background:#202020;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    transition:0.3s ease-in;
+}
+.btn:hover{
+    background:#fff;
+    border:solid 2px #202020;
+    color:#000;
+    transition:0.3s ease-out;
+    font-size: 15px;
+}
+.googlebtn{
+    background:#ba0b05;
+}
+.googlebtn:hover{
+    border:solid 2px #ba0b05;
+    color:#ba0b05;
+}
+.addPostButton{
+    width:70%;
+    margin-top:10px;
+}
+.or{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.or img{
+    width:30px;
+}
+
+
+/*Register zone*/
+.authInputRegister{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.authInputRegister input {
+    width:60%;
+    padding:10px 10px 10px 10px;
+    border: none;
+    border-bottom: solid 1px #c0c0c1;
+    margin:10px;
+    background: none;
+    outline:none;
+    text-align: center;
+    border-bottom: 1.5px solid;
+}   
+.authInputRegister input:focus{
+    transition:0.2s linear;
+    border-bottom: 1.5px solid #4a69bd;
+}
+.authButtonsRegister{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+}
+.createpostContainer{
+    width:80%;
+    height:85%;
+    display: flex;
+    flex-flow: row;
+}
+@media screen and (max-width:1110px){
+    .createpostContainer h2{
+        font-size:16px;
+        text-align:center;
+    }
+}
+@media screen and (max-width:600px){
+    .headerAddPost{
+        height:80% ;
+    }
+}

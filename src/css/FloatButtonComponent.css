@@ -1,0 +1,51 @@
+.FloatButtonContainer{
+    background:#101010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:0.3s ease;
+    transform: translate(500px,0);
+}
+.FloatButtonContainer img{
+    width:60%;
+}
+.FloatButtonContainer:hover{
+    background:#202023;
+    transition:0.3s ease;
+    transform: rotate(90deg);
+}
+.FloatDownButton{
+    background:rgba(10,10,10,.9);
+    width: 60px;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius:50px;
+    position: fixed;
+    bottom: 85px;
+    right: -30px;
+    cursor: pointer;
+    z-index: 99;
+    margin-right: 50px;
+}
+
+
+.FloatDownButton:hover{
+    background:#202023;
+    transition:0.5s ease;
+}
+.FloatDownButton img{
+    width:60%;
+    transform:rotate(180deg);
+}
+.ocultarBoton{
+    display:none;
+}
